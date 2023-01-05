@@ -401,7 +401,7 @@ button {
 .footer-wrap {
   display: flex;
   justify-content: space-between;
-    align-items: baseline;
+  align-items: baseline;
 }
 .logo-accent-white {
   font-family: "Raleway", sans-serif;
@@ -425,7 +425,7 @@ button {
 .wrapper {
   margin-right: 120px;
 }
-.company-social{
+.company-social {
   margin-right: 80px;
 }
 .company-social-title {
@@ -464,50 +464,49 @@ button {
 .company-social-icon {
   fill: currentColor;
 }
-.subscribe-form{
+.subscribe-form {
   display: flex;
   align-items: flex-end;
 }
-.subscribe-form-field{
-
+.subscribe-form-field {
 }
-.subscribe-form-input-descr{
+.subscribe-form-input-descr {
   display: block;
   margin-bottom: 16px;
   font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.5;
 
-letter-spacing: 0.02em;
+  letter-spacing: 0.02em;
 
-color: var(--white-color);
+  color: var(--white-color);
 }
-.subscribe-form-input{
-width: 264px;
-height: 40px;
-padding-left: 16px;
-background-color: transparent;
-border: 1px solid rgba(255, 255, 255, 0.3);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-border-radius: 4px;
-color: var(--white-color);
-cursor: pointer;
+.subscribe-form-input {
+  width: 264px;
+  height: 40px;
+  padding-left: 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: var(--white-color);
+  cursor: pointer;
 }
 .subscribe-form-input::placeholder {
   letter-spacing: 0.04em;
 
   color: rgba(255, 255, 255, 0.6);
-  }
+}
 .subscribe-form-submit {
   display: flex;
   align-items: center;
-margin-left: 24px;
-padding: 8px 24px 8px 24px;
-background: var(--accent-color);
-border-radius: 4px;
-border: none;
-transition: background-color var(--timing-duration) var(--timing-function),
-box-shadow var(--timing-duration) var(--timing-function);
+  margin-left: 24px;
+  padding: 8px 24px 8px 24px;
+  background: var(--accent-color);
+  border-radius: 4px;
+  border: none;
+  transition: background-color var(--timing-duration) var(--timing-function),
+    box-shadow var(--timing-duration) var(--timing-function);
 }
 .subscribe-form-submit:hover,
 .subscribe-form-submit:focus {
@@ -518,18 +517,17 @@ box-shadow var(--timing-duration) var(--timing-function);
 .subscribe-form-submit:active {
   background: var(--last-accent-color);
 }
-.subscribe-form-submit-descr{
+.subscribe-form-submit-descr {
   margin-right: 16px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  
+
   color: var(--white-color);
-  
 }
-.subscribe-form-send-icon{
+.subscribe-form-send-icon {
   fill: var(--white-color);
 }
 
@@ -679,7 +677,7 @@ box-shadow var(--timing-duration) var(--timing-function);
   border-radius: 50%;
   line-height: 1;
 }
-.modal-close-btn:active{
+.modal-close-btn:active {
   background-color: var(--last-accent-color);
   fill: var(--white-color);
   border: none;
@@ -695,33 +693,84 @@ box-shadow var(--timing-duration) var(--timing-function);
   text-align: center;
   margin-bottom: 16px;
   font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 .modal-form-name {
 }
 .modal-form-descr {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.33;
+
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.modal-form-input-wrapper {
+  display: block;
+  position: relative;
 }
 .modal-form-input {
+  padding-left: 38px;
   width: 100%;
   height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--timing-duration) var(--timing-function);
+cursor: pointer;
+}
+.modal-form-input:focus {
   border: 1px solid var(--accent-color);
-border-radius: 4px;
+  outline: none;
 }
-.modal-form-phone {
+.modal-form-input:focus + .modal-form-input-icon {
+  fill: var(--accent-color);
 }
-.modal-form-email {
+
+.modal-form-field {
+  margin-bottom: 8px;
 }
-.modal-form-comment {
+.modal-form-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: var(--main-color);
+  transition: fill var(--timing-duration) var(--timing-function);
+
 }
-.modal-form-message {
+.modal-form-message{
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--timing-duration) var(--timing-function);
+cursor: pointer;
+}
+.modal-form-message::placeholder {
+  font-size: 12px;
+line-height: 1.33;
+letter-spacing: 0.04em;
+
+color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-message:focus {
+border: 1px solid var(--accent-color);
+  outline: none;
+;
 }
 .modal-form-checkbox {
 }
 .modal-form-checkbox-descr {
 }
 .modal-form-submit {
+  background: var(--accent-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+color: var(--white-color);
+border: none;
 }
-
