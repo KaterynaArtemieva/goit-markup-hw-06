@@ -646,8 +646,15 @@ button {
   width: 100%;
   height: 100%;
   background: rgba(46, 47, 66, 0.4);
-  transform: scale(1);
-  transition: transform var(--timing-duration) var(--timing-function);
+
+  backdrop-filter: blur(2px);
+  transition: visibility var(--timing-duration) var(--timing-function),
+    opacity var(--timing-duration) var(--timing-function);
+}
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 .modal {
   position: absolute;
@@ -682,9 +689,7 @@ button {
   fill: var(--white-color);
   border: none;
 }
-.backdrop.is-hidden {
-  transform: scale(0);
-}
+
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -697,13 +702,18 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-.modal-form-name {
+.modal-form-descr-name {
+  font-size: 12px;
+  line-height: 1.33;
+
+  letter-spacing: 0.04em;
+  color: #8e8f99;
 }
 .modal-form-descr {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
-  line-height: 1.33;
+  line-height: 1.17;
 
   letter-spacing: 0.04em;
   color: #8e8f99;
@@ -732,7 +742,7 @@ button {
 .modal-form-field {
   margin-bottom: 8px;
 }
-.modal-form-field:last-of-type{
+.modal-form-field:last-of-type {
   margin-bottom: 16px;
 }
 .modal-form-input-icon {
@@ -764,7 +774,7 @@ button {
   border: 1px solid var(--accent-color);
   outline: none;
 }
-.checkbox-input{
+.checkbox-input {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -776,12 +786,11 @@ button {
   top: 0;
   width: 16px;
   height: 16px;
-  /* overflow: hidden; */
   background-color: white;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border: 1.25px solid var(--main-color);
-border-radius: 2px;
+  border-radius: 2px;
 }
 .checkbox-input:checked + .checkbox-custom {
   background-color: var(--last-accent-color);
@@ -791,6 +800,25 @@ border-radius: 2px;
 
 .modal-form-checkbox {
   position: relative;
+  display: flex;
+
+  margin-bottom: 24px;
+}
+.checkbox-descr {
+  padding-left: 24px;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+
+  color: #757575;
+}
+.checkbox-descr-link {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+
+  color: var(--accent-color);
 }
 .modal-form-submit {
   margin-left: auto;
