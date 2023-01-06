@@ -732,6 +732,9 @@ button {
 .modal-form-field {
   margin-bottom: 8px;
 }
+.modal-form-field:last-of-type{
+  margin-bottom: 16px;
+}
 .modal-form-input-icon {
   position: absolute;
   top: 50%;
@@ -770,23 +773,24 @@ button {
 }
 .checkbox-custom {
   position: absolute;
-  margin-top: 0.2em;
-  margin-left: -1em;
-  width: 0.6em;
-  height: 0.6em;
-  overflow: hidden;
-  border-radius: 0.05em;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  /* overflow: hidden; */
   background-color: white;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  box-shadow: 0 0 0 0.1em #4A90E2;
+  border: 1.25px solid var(--main-color);
+border-radius: 2px;
 }
 .checkbox-input:checked + .checkbox-custom {
-  background-color: #4A90E2;
+  background-color: var(--last-accent-color);
+  border-color: var(--last-accent-color);
   background-image: url(../images/check.svg);
 }
 
-.modal-form-checkbox-descr {
+.modal-form-checkbox {
+  position: relative;
 }
 .modal-form-submit {
   margin-left: auto;
